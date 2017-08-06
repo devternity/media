@@ -22,9 +22,9 @@ const httpPort = 5000;
 const livereload = lr();
 const livereloadPort = 35729;
 
-gulp.task('clean', () => {
-    return del([dir.dest]);
-});
+// gulp.task('clean', () => {
+//     return del([dir.dest]);
+// });
 
 
 gulp.task('pug', () => {
