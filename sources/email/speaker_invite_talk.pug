@@ -1,0 +1,22 @@
+mjml
+  mj-body
+    mj-container(background-color="#E1E8ED")
+      mj-section(padding="20px" background-color="white")
+        mj-image(href="https://devternity.com" src="https://devternity.com/images/dt_logo_rect.png" width="50px")
+      mj-section(padding="20px" background-color="white")
+        mj-column(width="100%")
+          mj-text(align="center")
+            h2 Dear {{name}}
+          mj-text(align="center" color="grey") My name is Eduards and I am the founder of 
+            b: a(href="https://devternity.com") DevTernity
+            |  – the biggest software development conference in 
+            b #{data.city}, #{data.country}
+            | . Every year we attract 750 attendees. This year, DevTernity has been scheduled for the <strong>#{data.date}</strong>.
+          mj-text(align="center" color="grey") Recently, I've watched your talk on {{talk}}} and really liked it!
+          mj-text(align="center" color="grey") I don't know anyone who can present the topic as vividly as you do. I would be pleased if you joined us as a speaker, and inspired our tech crowd to join the {{movement}} movement.
+          mj-text(align="center" color="grey") 
+            | Riga is one of the most beautiful cities for visiting in winter – no one has ever remained indifferent to our Old Town! Surprisingly enough, the tradition of decorating Christmas trees has begun in our hometown. Check out our 
+            b: a(href="https://www.youtube.com/watch?v=GhbvNzGo064") Riga RAP guide
+            |  :) We'll also take care of the hotel and {{flight}} – #{data.city} – {{flight}} flight.
+          mj-text(align="center" color="grey") I am looking forward to hearing from you & hope to meet you in Riga!
+          mj-image(src=`/images/eduards_hi.png` width="400")

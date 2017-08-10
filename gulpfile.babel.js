@@ -26,6 +26,12 @@ const livereloadPort = 35729;
 //     return del([dir.dest]);
 // });
 
+gulp.task('img', () => {
+    return gulp.src("./sources/**/*.png")
+        .pipe(gulp.dest(dir.dest))
+        .pipe(refresh(livereload));
+});
+
 
 gulp.task('pug', () => {
     return gulp.src("./sources/**/*.pug")
@@ -54,6 +60,7 @@ gulp.task('serve', () => {
 
 gulp.task('watch', () => {
   gulp.watch(["./sources/**/*.pug"], ['pug']);
+  gulp.watch(["./sources/**/*.png"], ['img']);
 });
 
 
@@ -65,6 +72,6 @@ gulp.task('deploy', function () {
     return gulp.src(['./dist/**/*']).pipe(deploy(options));
 });
 
-gulp.task('build', ['pug']);
+gulp.task('build', ['pug', 'img']);
 gulp.task('default', ['build', 'serve', 'watch']);
 
