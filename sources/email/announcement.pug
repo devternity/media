@@ -19,7 +19,8 @@ mjml
           mj-text(align="center" color="grey") DevTernity has become the major IT event in the Baltics, attracting #{data.attendees_total} forward-thinking developers, architects and engineering leaders. Be part of the movement.
 
       mj-section(background-color="#f3f3f3" padding-top="20px")
-        mj-text(align="center" font-size="20" color="#a5b0b8") Some of our speakers
+        mj-text(align="center" color="#a5b0b8")
+          h2 Some of our speakers
 
       each program in data.program
         if program.event == "keynotes"
@@ -33,7 +34,8 @@ mjml
                   mj-text(align="center" color="grey") #{speech.pitch}
 
       mj-section(background-color="#ffffff" padding-top="20px")
-        mj-text(align="center" font-size="20" color="#a5b0b8") What people say
+        mj-text(align="center" color="#a5b0b8")
+          h2 What people say
 
 
       each promo in data.promos

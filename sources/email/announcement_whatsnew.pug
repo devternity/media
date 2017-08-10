@@ -1,0 +1,66 @@
+mjml
+  mj-body
+    mj-container(background-color="#E1E8ED")
+      mj-section(padding="20px" background-color="white")
+        mj-image(href="https://devternity.com" src="https://devternity.com/images/dt_logo_rect.png" width="50px")
+      mj-section(padding="20px" background-color="white")
+        mj-column(width="100%")
+          mj-text(align="center")
+            h2 Hey there! How's it going? 👋
+          mj-text(align="center" color="grey") It's been a while since we have announced 
+            b: a(href="https://devternity.com") #{data.theme}
+            |  – the premium-quality conference for forward-thinking technologists.
+          mj-text(align="center" color="grey") Haven't secure a seat yet? Here is why we believe you should –
+
+      mj-section(background-color="white" padding="20px" )
+        mj-text(align="center" color="#a5b0b8")
+          h2 Inspiring Talks
+        mj-text(align="center" color="grey") 
+          b Quality matters
+          |, therefore DevTernity applies invite-only model to attracting speakers. This makes us stand out from most conferences on the market. Check out the website for the latest, impressive program additions. 
+          b Chaos Engineering
+          |, 
+          b Modern API Design with GraphQL
+          |, 
+          b Machine Intelligence at Google Scale
+          |, 
+          b Scaling Architecture @ Zalando
+          |, so to name a few. 
+        mj-section(width="60%")
+          mj-image(src="/images/talks.png")
+
+        mj-text(align="center" color="#a5b0b8")
+          h2 Power Workshops
+        mj-text(align="center" color="grey") 
+          | On the second conference day, we run a series of instructor-led, power workshops. Consider level-upping your 
+          b Software Architecture
+          |  skills, getting hands dirty with 
+          b Machine Learning
+          | , demystifying 
+          b Event Sourcing &amp; CQRS
+          |, diving into  
+          b Resilient Software Design, 
+          | crafting clean code using 
+          b Test-Driven Development
+          | , and building immutable infrastructure with 
+          b HashiStack
+          | .
+        mj-section(width="60%")
+          mj-image(src="/images/workshop.png")          
+ 
+        mj-text(align="center" color="#a5b0b8")
+          h2 Top conference in your hometown
+        mj-text(align="center" color="grey") 
+          | DevTernity is setting
+          b  the higest quality bar for the whole region
+          |  – fantastic atmosphere, top speakers, practical workshops, no marketing, affordable prices, a homelike after-party with speakers and like-minded people. With DevTernity, there is no need to fly hundreds kilometers to attend a world-level conference – it's right behind the corner. 
+        mj-section(width="60%")
+          mj-image(src="/images/bus.png")                            
+
+      mj-section(background-color="#ffffff" padding-top="20px")
+        mj-column(width="100%")
+          mj-button(href=`${data.selfLink}` background-color="#3ba666" color="white") Take me with you
+          mj-divider(border-width="1px" border-style="dashed" border-color="lightgrey")
+          mj-text(align="center" color="grey" font-size="11")
+            | Not interested in the top conference in #{data.city}? 
+            a(href="[Unsubscribe]") we got you covered

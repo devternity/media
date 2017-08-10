@@ -27,7 +27,7 @@ const livereloadPort = 35729;
 // });
 
 gulp.task('img', () => {
-    return gulp.src("./sources/**/*.png")
+    return gulp.src(["./sources/**/*.png", "./sources/**/*.jpg"])
         .pipe(gulp.dest(dir.dest))
         .pipe(refresh(livereload));
 });
@@ -60,7 +60,7 @@ gulp.task('serve', () => {
 
 gulp.task('watch', () => {
   gulp.watch(["./sources/**/*.pug"], ['pug']);
-  gulp.watch(["./sources/**/*.png"], ['img']);
+  gulp.watch(["./sources/**/*.png", "./sources/**/*.jpg"], ['img']);
 });
 
 
