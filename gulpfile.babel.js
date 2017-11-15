@@ -13,6 +13,7 @@ import ecstatic from "ecstatic"
 import refresh from "gulp-livereload"
 import embedlr  from "gulp-embedlr"
 import mjmlEngine from "mjml"
+import express from "express"
 
 const dir = {
     dest: './dist'
@@ -21,6 +22,18 @@ const dir = {
 const httpPort = 5000;
 const livereload = lr();
 const livereloadPort = 35729;
+
+
+
+gulp.task('express', () => {
+    var app = express();
+    app.set('views', './views')
+    app.set('view engine', 'pug')
+});
+
+// app.get('/', function (req, res) {
+//   res.render('index', { title: 'Hey', message: 'Hello there!' })
+// })
 
 // gulp.task('clean', () => {
 //     return del([dir.dest]);
@@ -73,5 +86,5 @@ gulp.task('deploy', function () {
 });
 
 gulp.task('build', ['pug', 'img']);
-gulp.task('default', ['build', 'serve', 'watch']);
+gulp.task('default', ['express']);
 

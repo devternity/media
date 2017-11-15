@@ -1,0 +1,111 @@
+mjml
+  mj-body
+    mj-container(background-color="#E1E8ED")
+      mj-section(background-color="white")
+        mj-column(width="100%")
+          mj-image(href="https://devternity.com" src="https://devternity.com/images/dt_logo_rect.png" width="50px")
+          mj-text(align="center")
+            h2 Hi, #{recipient_name.toString()}! 👋
+          mj-image(src="https://d26dzxoao6i3hh.cloudfront.net/items/132s3W1v020g392y3P1G/eduardsi.png?v=0728d5ba" width="50px")
+          mj-text(align="center" color="grey") It's Eduards from DevTernity!
+          mj-text(align="center" color="grey") As your visit date to #{city.toString()} is approaching, I'd like to share some useful information with you.
+
+      mj-section(background-color="#f3f3f3")
+        mj-column(width="100%")
+          mj-text(align="center" color="#a5b0b8")
+            h2 Taxi        
+        mj-column(width="200")
+          mj-image(src=`https://d26dzxoao6i3hh.cloudfront.net/items/2Q3f0p3G3G1R2I3r3n0W/taxies.png?v=74e0afc4` border-radius="2px")
+        mj-column(width="350")
+          mj-text(align="center" color="grey") You can get to the hotel by airport taxi. I suggest choosing either Red Cab or Baltic Taxi (see pics). All drivers speak English; cars equipped with Wi-Fi and card terminals. Airport – Hotel trip takes approximately 15 minutes and costs ~13€. Cars equipped with a baby seat are available upon request.
+      mj-section(background-color="#f3f3f3") 
+        mj-column(width="200")
+          mj-image(src=`https://d26dzxoao6i3hh.cloudfront.net/items/2y302X2x3K19382c1e0u/Image%202017-11-07%20at%2011.22.02%20AM.png?v=a92bd3b7`)
+        mj-column(width="350")
+          mj-text(align="center" color="grey") 
+            | Uber is not available in Latvia, but there is an excellent alternative to Uber called 
+            b: a(href="https://invite.taxify.eu/E6MYX") Taxify
+            | . Taxify offers new cars starting with 0.36€/km, which is twice as cheap as Red Cab or Baltic Taxi. 
+
+
+      if hotel_checkin && hotel_checkout
+        mj-section(background-color="#f3f3f3")
+          mj-column(width="100%")
+            mj-text(align="center" color="#a5b0b8")
+              h2 Hotel 
+          mj-column(width="200")
+            mj-image(src=`https://d26dzxoao6i3hh.cloudfront.net/items/1K0p3I0F1J472T2V350t/Image%202017-11-07%20at%2011.25.01%20AM.jpg?v=e3a252f7` border-radius="2px")
+          mj-column(width="350")
+            mj-text(align="center" color="grey") 
+              | We booked the room (🍳 breakfast included) from #{hotel_checkin.toString()} to #{hotel_checkout.toString()}. 
+              b: a(href=`${hotel_link.toString()}`) #{hotel_name.toString()}
+              |  is at 10-15 minute 
+              b: a(href=`${hotel_to_venue_map.toString()}`) walking distance
+              |  from the conference venue.
+
+      mj-section(background-color="#f3f3f3")
+        mj-column(width="100%")
+          mj-text(align="center" color="#a5b0b8")
+            h2 Conference venue
+        mj-column(width="200")
+          mj-image(src=`https://d26dzxoao6i3hh.cloudfront.net/items/1n1c3E2P3m2q04381J0z/lnb.png?v=12d8a87b` border-radius="2px")
+        mj-column(width="350")
+          mj-text(align="center" color="grey") The conference runs in the 
+            b: a(href="https://lnb.lv") #{venue_name.toString()}
+            | . See 
+            b: a(href=`${venue_map.toString()}`) Google maps location
+            | . The main entrance is visible in the picture.
+      mj-section(background-color="#f3f3f3")
+        mj-column(width="100%")
+          mj-text(align="center" color="#a5b0b8")
+            h2 Speakers' dinner
+        mj-column(width="200")
+          mj-image(src=`https://d26dzxoao6i3hh.cloudfront.net/items/0n3E072c333B1A1d0c0W/Image%202017-11-07%20at%2012.29.37%20PM.png?v=7aec989d` border-radius="2px")
+        mj-column(width="350")
+          mj-text(align="center" color="grey") You are welcome to join us on 30 November, 20:00 at LIDO Atpūtas Centrs – the famous Latvian restaurant that serves Latvian cuisine and craft beer. Since LIDO is 6 km away from the hotel, we will organize transfer directly from the hotel. We organize pick up at 19:30 at the #{hotel_name.toString()} foyer. The contact person is Iláha (+37122405141).
+          mj-text(align="center" color="grey") If you decide to get to the place on your own, just ask LIDO staff to show you directions to "Alus Pagrabins" (located on the ground floor), ask for help in the Slack channel (see below) or just call Iláha.
+
+      mj-section(background-color="#f3f3f3")
+        mj-column(width="100%")
+          mj-text(align="center" color="#a5b0b8")
+            h2 Your talk
+        mj-column(width="200")
+          mj-image(src=`https://d26dzxoao6i3hh.cloudfront.net/items/1g281s212V1N443Y2u2H/attendees.png?v=d5a37ff6` border-radius="2px")
+        mj-column(width="350")
+          mj-text(align="center" color="grey") 
+            | Conference registration starts at 8:00 AM Riga time. Please check out 
+            b: a(href="http://devternity.com/") the conference program
+            |  to see when your talk is scheduled, as well as the length of the session. Please come to the conference room at least 10 minutes in advance. Our team will help you adjust the laptop, connect to the projector (16:9), set up the headset, and clicker. During your talk, there will be a person showing you how much time left (10, 5, 1 minute). If you need any additional equipment, please let me know.
+
+      mj-section(background-color="#f3f3f3")
+        mj-column(width="100%")
+          mj-text(align="center" color="#a5b0b8")
+            h2 Speakers' room
+        mj-column(width="200")
+          mj-image(src=`https://d26dzxoao6i3hh.cloudfront.net/items/0F0s1G3N3N3u2C3B1k2N/lounge.png?v=d4bb07c8` border-radius="2px")
+        mj-column(width="350")
+          mj-text(align="center" color="grey") We will arrange a separate room for speakers, where you can hide from the crowd and do whatever your heart desires. The quiet room will be equipped with Wi-Fi, power plugs, drinks, snacks, and fruits. Our team will show you directions upon arrival.
+
+      mj-section(background-color="#f3f3f3")
+        mj-column(width="100%")
+          mj-text(align="center" color="#a5b0b8")
+            h2 Lunch
+        mj-column(width="200")
+          mj-image(src=`https://d26dzxoao6i3hh.cloudfront.net/items/2k3X0Q3n1s361u3J260k/kliversala.png?v=472172b6` border-radius="2px")
+        mj-column(width="350")
+          mj-text(align="center" color="grey") 
+            | For lunch, please visit 
+            b: a(href="http://www.gaismaspilsrestorans.lv/") Kliversala Restaurant
+            |. The restaurant is on the opposite side of the conference venue, and you'll get exact directions at the registration desk. The lunch is served from 11:00 to 16:00 and you are free to choose the time at your convenience. Your swag bag will contain a lunch coupon that you'll have to show to the cashier. 
+
+      mj-section(background-color="#f3f3f3" padding-top="20px")
+        mj-column(width="100%")
+          mj-text(align="center" color="#a5b0b8")
+            h2 Slack        
+        mj-column(width="200")
+          mj-image(src=`https://d26dzxoao6i3hh.cloudfront.net/items/0x3U1B1i2K3Y3a3B341Q/Image%202017-11-07%20at%201.56.11%20PM.png?v=0c9be71a` border-radius="2px")          
+        mj-column(width="350")
+          mj-text(align="center" color="grey") 
+            | Finally, I'd like to invite you to join speakers' Slack channel – this is the best opportunity to stay in touch with other speakers and conference organizers. We are there for you 24/7.        
+        mj-column(width="100%")
+          mj-button(href=`https://slack-im-forwarder.glitch.me/invite?email=${recipient_email.toString()}&channels=${slack_channels.toString()}` background-color="#3ba666" color="white") Join Slack Channel
