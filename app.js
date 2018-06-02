@@ -12,24 +12,24 @@ app.set('views', './sources/email')
 app.engine('pug', function (filePath, options, callback) { // define the template engine
   var $ = pug.renderFile(filePath, options);
   var html = mjml.mjml2html($);
-  if (html.errors.length > 0) {
-  	return callback(html.errors, null);
-  } else {
+  // if (html.errors.length > 0) {
+  	// return callback(html.errors, null);
+  // } else {
   	return callback(null, html.html);
-  }
+  // }
 })
 
 app.set('view engine', 'pug')
 
 app.get('/email/:template', function (req, res) {
-	(async function () {
-		let event = await fetch('http://devternity.com/js/event.js')
+	(async () => {
+		let event = await fetch(`https://devternity.com/js/event.js`)
 		let eventJson = await event.json()
-		let eventPointer = eventJson[0];
+		let eventSelf = eventJson[0];			
 		var data = {};
-		_.extend(data, eventPointer)
+		_.extend(data, eventSelf)
 		_.extend(data, req.query)
-		res.render(req.params.template + '.pug', data)
+		res.render(req.params.template + ".pug", data)		
 	})();
 })
 

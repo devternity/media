@@ -8,7 +8,7 @@ mjml
           mj-text(align="center")
             h2 Hey there! How's it going? 👋
           mj-text(align="center" color="grey") It's been a while since we have announced 
-            b: a(href="https://devternity.com") #{data.theme}
+            b: a(href="https://devternity.com") #{theme}
             |  – the premium-quality conference for forward-thinking IT professionals.
           mj-text(align="center" color="grey") Haven't secure a seat yet? Here is why we believe you should –
 
@@ -69,8 +69,8 @@ mjml
             | .
           mj-text(align="center" color="grey")   
             | You can share the code with your team as well.
-          mj-button(href=`${data.selfLink}` background-color="#3ba666" color="white") Take me with you
+          mj-button(href=`${selfLink}` background-color="#3ba666" color="white") Take me with you
           mj-divider(border-width="1px" border-style="dashed" border-color="lightgrey")
           mj-text(align="center" color="grey" font-size="11")
-            | Not interested in the top conference in #{data.city}? 
+            | Not interested in the top conference in #{city}? 
             a(href="[Unsubscribe]") we got you covered

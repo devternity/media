@@ -8,23 +8,23 @@ mjml
           mj-text(align="center")
             h2 Hey there! How's it going? 👋
           mj-text(align="center" color="grey") We are happy to announce that registration to 
-            b: a(href="https://devternity.com") #{data.theme}
+            b: a(href="https://devternity.com") #{theme}
             |  is open.
-          mj-text(align="center" color="grey") This year you can enjoy #{data.talks_total} premium-quality talks and choose among #{data.workshops_total} hands-on power workshops.
+          mj-text(align="center" color="grey") This year you can enjoy #{talks_total} premium-quality talks and choose among #{workshops_total} hands-on power workshops.
           mj-text(align="center" color="grey") The topics include 
-            each buzzword in data.buzzwords
+            each buzzword in buzzwords
               b #{buzzword}
               |, 
             |  and a lot more.
-          mj-text(align="center" color="grey") DevTernity has become the major IT event in the Baltics, attracting #{data.attendees_total} forward-thinking developers, architects and engineering leaders. Be part of the movement.
+          mj-text(align="center" color="grey") DevTernity has become the major IT event in the Baltics, attracting #{attendees_total} forward-thinking developers, architects and engineering leaders. Be part of the movement.
 
       mj-section(background-color="#f3f3f3" padding-top="20px")
         mj-text(align="center" color="#a5b0b8")
           h2 Some of our speakers
 
-      each program in data.program
-        if program.event == "keynotes"
-          each speech in program.schedule
+      each p in program
+        if p.event == "keynotes"
+          each speech in p.schedule
             if speech.pitch
               mj-section(background-color="#f3f3f3" padding-top="20px")
                 mj-column(width="130")
@@ -38,7 +38,7 @@ mjml
           h2 What people say
 
 
-      each promo in data.promos
+      each promo in promos
         mj-section(background-color="#ffffff")
           mj-column(width="200")
             mj-image(href=`${promo.link}` src=`https://devternity.com/images/${promo.logo}` width="200")
@@ -48,11 +48,11 @@ mjml
 
       mj-section(background-color="#ffffff" padding-top="20px")
         mj-column(width="100%")
-          mj-button(href=`${data.selfLink}` background-color="#3ba666" color="white") Secure a seat now
+          mj-button(href=`${selfLink}` background-color="#3ba666" color="white") Secure a seat now
 
       mj-section(background-color="#ffffff" padding-top="20px")
         mj-column(width="100%")
           mj-divider(border-width="1px" border-style="dashed" border-color="lightgrey")
           mj-text(align="center" color="grey" font-size="11")
-            | Not interested in the top conference in #{data.city}? 
+            | Not interested in the top conference in #{city}? 
             a(href="[Unsubscribe]") we got you covered
