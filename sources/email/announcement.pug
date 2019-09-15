@@ -12,11 +12,12 @@ mjml
             |  is open.
           mj-text(align="center" color="grey") This year you can enjoy #{talks_total} premium-quality talks and choose among #{workshops_total} hands-on power workshops.
           mj-text(align="center" color="grey") The topics include 
-            each buzzword in buzzwords
-              b #{buzzword}
-              |, 
+            b Clean Architecture, Coding, Testing, Refactoring, Jedi Techniques, Career, 
             |  and a lot more.
-          mj-text(align="center" color="grey") DevTernity has become the major IT event in the Baltics, attracting #{attendees_total} forward-thinking developers, architects and engineering leaders. Be part of the movement.
+          mj-text(align="center" color="grey") 
+            | Ranked among 
+            b  the top 3 tech conferences in Europe,
+            |  DevTernity has become the most waited event for top developers, architect and engineering leaders. Join the movement!
 
       mj-section(background-color="#f3f3f3" padding-top="20px")
         mj-text(align="center" color="#a5b0b8")
@@ -33,26 +34,17 @@ mjml
                   mj-text(align="center" font-size="16" color="grey") #{speech.name} (#{speech.country_long})
                   mj-text(align="center" color="grey") #{speech.pitch}
 
-      mj-section(background-color="#ffffff" padding-top="20px")
+      mj-section(background-color="#ffffff" padding="20px")
         mj-text(align="center" color="#a5b0b8")
-          h2 What people say
-
-
-      each promo in promos
-        mj-section(background-color="#ffffff")
-          mj-column(width="200")
-            mj-image(href=`${promo.link}` src=`https://devternity.com/images/${promo.logo}` width="200")
-          mj-column(width="350")
-            mj-text(align="center" color="grey") #{promo.promo}
-            mj-text(align="center" color="grey") – #{promo.signature}
-
-      mj-section(background-color="#ffffff" padding-top="20px")
+          h2 What's next?
+          mj-text(align="center") We brought the best speakers to Riga, so you can learn directly from industry influencers. How it's your turn.
+      mj-section(background-color="#ffffff")
         mj-column(width="100%")
-          mj-button(href=`${selfLink}` background-color="#3ba666" color="white") Secure a seat now
+          mj-button(href=`${selfLink}` background-color="#3ba666" color="white") Count me in
 
       mj-section(background-color="#ffffff" padding-top="20px")
         mj-column(width="100%")
           mj-divider(border-width="1px" border-style="dashed" border-color="lightgrey")
           mj-text(align="center" color="grey" font-size="11")
-            | Not interested in the top conference in #{city}? 
+            | Bored developer, not attending conferences? 
             a(href="[Unsubscribe]") we got you covered
