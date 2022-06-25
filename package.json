@@ -14,7 +14,7 @@
     "gulp-mjml": "^2.2.0",
     "gulp-pug2": "^0.0.2",
     "lodash": "^4.17.4",
-    "node-fetch": "^1.7.1",
+    "node-fetch": "^2.6.7",
     "pug": "^2.0.0-rc.3",
     "tiny-lr": "^1.0.5"
   },
