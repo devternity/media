@@ -6,27 +6,43 @@ mjml
       mj-section(padding="20px" background-color="white")
         mj-column(width="100%")
           mj-text(align="center")
-            h2 Hey there! How's it going?
+            h2 Hi! 👋
           mj-image(src="https://res.cloudinary.com/eduardsi/image/upload/v1531680633/HiFromEduards_dfujzu.gif" border-radius="500px" width="100px")
-          mj-text(align="center" color="grey") I am happy to announce that 
+          mj-text(align="center" color="grey")  I just wanted to let you know that registration to 
             b: a(href="https://devternity.com") #{theme}
-            |  conference program is complete, and it's the best time to grab your ticket.
-          mj-text(align="center" color="grey") This year you can enjoy twenty top-quality talks and choose among seven full-day, power workshops.
-          mj-text(align="center" color="grey") The topics include 
-            b Clean Architecture, Coding, Testing, Refactoring, Jedi Techniques, Career, 
-            |  and a lot more.
+            |  is running.
           mj-text(align="center" color="grey") 
-            | Ranked among 
-            b  the top 3 tech conferences in Europe,
-            |  DevTernity has become the most waited event for top developers, architects, and engineering leaders. Join the movement!
+  
+          //- Hey {{name}}!
+
+          //- I want to invite you to DevTernity 2022 – the main developer conference of the year. This year, you can attend 21 sessions and 10 masterclasses by Kent Beck, Robert Martin, Allen Holub, Sandro Mancuso, Scott Hanselman, Venkat Subramaniam, Kevlin Henney, and other industry leaders.
+
+          //- ❤️ Your personal 10% discount – {{discount}}. Feel free to share it with your team.
+
+          //- See you at the conference!
+
+          //- https://devternity.com
+          //- I just wanted to let you know that DevTernity 2021 conference program is ready, and it's the best time to grab your ticket.
+          //- This year you can enjoy twenty practical talks and choose among seven full-day power workshops.
+          //- The topics include Good Architecture, Clean Code, Test-Driven Development, Refactoring, Dealing with Technical Debt, Agile Without BS, Productivity, Career Development, and a lot more.
+          //- Ranked among the top 3 tech conferences in Europe, DevTernity has become the most awaited event for senior developers, architects, and engineering leaders. Join the movement!
+
+          //- > devternity.com
+          mj-text(align="center" color="grey") This year you can enjoy 10 talks and 10 masterclasses to help you build a remarkable engineering career —
+            b  Clean Code, Architecture, XP, TDD, DDD, Leadership, Money
+            | ... 
+          mj-text(align="center" color="grey") Among speakers are 
+            b Robert Martin, Kent Beck, Allen Holub, Scott Hanselman, Venkat Subramaniam, Kevlin Henney
+            | . The lineup is mind-blowing. See yourself: 
       mj-section(padding="20px" background-color="white")
         mj-column(width="100%")
-          mj-image(src=`https://devternity.com/media/sources/images/spkr19.gif`)
+          mj-image(src=`https://devternity.com/images/spkr2022.gif`)
 
       mj-section(background-color="#ffffff" padding="40px")
         mj-text(align="center")
           h2 What's next?
-        mj-text(align="center" color="grey") We brought the best speakers to Riga, so that you can learn directly from industry influencers. Now it's your turn.
+        mj-text(align="center" color="grey") DevTernity has become the most waited event for experienced developers, architects, and engineering leaders. 
+          b Don't miss out!
       mj-section(background-color="#ffffff" padding="0")
         mj-column(width="100%")
           mj-button(href=`${selfLink}` background-color="#3ba666" color="white") Count me in
@@ -35,5 +51,5 @@ mjml
         mj-column(width="100%")
           mj-divider(border-width="1px" border-style="dashed" border-color="lightgrey")
           mj-text(align="center" color="grey" font-size="11")
-            | Bored developer, not attending conferences? 
-            a(href="[Unsubscribe]") we got you covered
+            | Never want to hear from DevTernity again? 
+            a(href="{{{ pm:unsubscribe }}}") Unsubscribe
