@@ -4,7 +4,7 @@
     "babel-preset-es2015": "^6.24.1",
     "del": "^3.0.0",
     "ecstatic": "^2.2.1",
-    "express": "^4.16.2",
+    "express": "^4.17.3",
     "gmail-send": "^1.2.11",
     "gulp": "^3.9.1",
     "gulp-data": "^1.2.1",
